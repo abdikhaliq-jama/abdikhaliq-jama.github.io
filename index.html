@@ -4,14 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Abdikhaliq Jama</title>
-    <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,700;1,400&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" href="favicon.png">
+    <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
 
     <style>
         :root {
-            --ink: #1f2430;
-            --muted: #5b6472;
+            --ink: #1a1a1a;
+            --muted: #666;
             --link: #2a2a8f;
-            --line: #e5e7eb;
+            --line: #e6e6e6;
         }
 
         * { box-sizing: border-box; }
@@ -21,89 +22,69 @@
             background: #fff;
             color: var(--ink);
             font-family: "EB Garamond", Garamond, "Times New Roman", serif;
-            font-size: 17px;
-            line-height: 1.55;
+            font-size: 18px;
+            line-height: 1.6;
         }
 
-        a { color: var(--link); text-decoration: none; }
-        a:hover { text-decoration: underline; }
+        a { color: var(--link); text-underline-offset: 3px; }
+        a:hover { color: var(--ink); }
         a:focus-visible { outline: 2px solid var(--link); outline-offset: 3px; }
 
-        .wrap { max-width: 980px; margin: 0 auto; padding: 0 28px; }
+        .wrap { max-width: 860px; margin: 0 auto; padding: 0 28px; }
 
-        /* Top bar */
-        .bar { border-bottom: 1px solid var(--line); }
-        .bar .wrap { display: flex; justify-content: space-between; align-items: center; height: 58px; }
-        .brand { font-size: 21px; font-weight: 700; color: var(--link); }
-        .brand:hover { text-decoration: none; }
-        .menu { display: flex; gap: 4px; height: 100%; }
-        .menu a { display: flex; align-items: center; padding: 0 12px; color: var(--muted); font-size: 16px; border-bottom: 2px solid transparent; margin-top: 2px; }
-        .menu a:hover { color: var(--ink); text-decoration: none; }
-        .menu a[aria-current="page"] { color: var(--link); font-weight: 700; border-bottom-color: var(--link); }
+        /* Header */
+        header { border-bottom: 1px solid var(--line); }
+        header .wrap { display: flex; justify-content: space-between; align-items: baseline; padding-top: 22px; padding-bottom: 18px; }
+        .brand { font-size: 22px; font-style: italic; color: var(--ink); text-decoration: none; }
+        nav { display: flex; gap: 26px; font-size: 17px; }
+        nav a { color: var(--muted); text-decoration: none; padding-bottom: 2px; border-bottom: 1px solid transparent; }
+        nav a:hover { color: var(--ink); }
+        nav a[aria-current="page"] { color: var(--ink); border-bottom-color: var(--ink); }
 
-        /* Page body */
-        .page { display: grid; grid-template-columns: 250px 1fr; gap: 48px; padding: 44px 0 56px; align-items: start; }
+        /* Content */
+        .page { display: grid; grid-template-columns: 220px 1fr; gap: 56px; padding: 64px 0 72px; align-items: start; }
 
-        .side img { width: 100%; aspect-ratio: 4 / 5; object-fit: cover; border-radius: 5px; display: block; }
-        .side h1 { font-size: 24px; line-height: 1.2; font-weight: 700; color: var(--link); margin: 18px 0 4px; }
-        .side .role { margin: 0; color: var(--muted); font-size: 16px; line-height: 1.4; }
-        .side hr { border: 0; border-top: 1px solid var(--line); margin: 18px 0; }
+        .photo img { width: 100%; aspect-ratio: 4 / 5; object-fit: cover; border-radius: 4px; display: block; }
+        .photo p { margin: 12px 0 0; font-size: 15px; font-style: italic; color: var(--muted); line-height: 1.4; }
 
-        .contact { list-style: none; margin: 0; padding: 0; }
-        .contact li { display: flex; align-items: center; gap: 12px; margin: 0 0 10px; font-size: 15px; line-height: 1.3; }
-        .contact svg { width: 16px; height: 16px; flex: none; fill: var(--ink); }
-        .contact a { color: var(--ink); }
-        .contact a:hover { color: var(--link); }
+        .text p { margin: 0 0 18px; }
+        .text .lead { font-size: 22px; line-height: 1.45; }
+        .contact { margin-top: 28px; padding-top: 18px; border-top: 1px solid var(--line); font-size: 16px; color: var(--muted); }
+        .contact span { margin: 0 8px; color: #bbb; }
 
-        .main p { margin: 0 0 16px; }
+        footer { border-top: 1px solid var(--line); }
+        footer .wrap { padding-top: 18px; padding-bottom: 28px; font-size: 14px; color: var(--muted); }
 
-        /* Footer */
-        .foot { background: #f4f5f8; border-top: 1px solid var(--line); color: var(--muted); font-size: 15px; }
-        .foot .wrap { padding-top: 20px; padding-bottom: 20px; }
-
-        @media (max-width: 800px) {
-            .page { grid-template-columns: 1fr; gap: 28px; padding: 32px 0 44px; }
-            .side { max-width: 250px; }
-            .bar .wrap { height: auto; flex-direction: column; gap: 4px; padding-top: 12px; }
-            .menu { height: 40px; }
+        @media (max-width: 700px) {
+            header .wrap { flex-direction: column; align-items: flex-start; gap: 8px; }
+            .page { grid-template-columns: 1fr; gap: 28px; padding: 36px 0 48px; }
+            .photo { max-width: 220px; }
         }
     </style>
 </head>
 
 <body>
 
-    <header class="bar">
+    <header>
         <div class="wrap">
             <a class="brand" href="index.html">Abdikhaliq Jama</a>
-            <nav class="menu" aria-label="Main">
+            <nav aria-label="Main">
                 <a href="index.html" aria-current="page">About</a>
                 <a href="blog.html">Writing</a>
             </nav>
         </div>
     </header>
 
-    <div class="wrap">
+    <main class="wrap">
         <div class="page">
 
-            <aside class="side">
+            <div class="photo">
                 <img src="profile.jpeg" alt="Abdikhaliq Jama">
-                <h1>Abdikhaliq Jama</h1>
-                <p class="role">Incoming MSc in Economics Student</p>
-                <hr>
-                <ul class="contact">
-                    <li>
-                        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M2 5h20v2.3l-10 6.2L2 7.3V5zm0 4.7 10 6.2 10-6.2V19H2V9.7z"/></svg>
-                        <a href="mailto:abdelkhalekjama@gmail.com">abdelkhalekjama@gmail.com</a>
-                    </li>
-                    <li>
-                        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a10 10 0 0 0-3.16 19.49c.5.09.68-.22.68-.48v-1.7c-2.78.6-3.37-1.34-3.37-1.34-.45-1.16-1.11-1.47-1.11-1.47-.9-.62.07-.61.07-.61 1 .07 1.53 1.03 1.53 1.03.89 1.52 2.34 1.08 2.91.83.09-.65.35-1.09.63-1.34-2.22-.25-4.56-1.11-4.56-4.94 0-1.09.39-1.98 1.03-2.68-.1-.25-.45-1.27.1-2.64 0 0 .84-.27 2.75 1.02a9.58 9.58 0 0 1 5 0c1.91-1.29 2.75-1.02 2.75-1.02.55 1.37.2 2.39.1 2.64.64.7 1.03 1.59 1.03 2.68 0 3.84-2.34 4.69-4.57 4.94.36.31.68.92.68 1.85v2.74c0 .27.18.58.69.48A10 10 0 0 0 12 2z"/></svg>
-                        <a href="https://github.com/abdikhaliq-jama" target="_blank" rel="noopener">GitHub</a>
-                    </li>
-                </ul>
-            </aside>
+                <p>Incoming MSc in Economics student</p>
+            </div>
 
-            <main class="main">
-                <p>Hi! I studied economics and statistics at the University of Nairobi. This fall I am starting my Master of Science in Economics at Rensselaer Polytechnic Institute in Troy, New York, with a merit-award scholarship.</p>
+            <div class="text">
+                <p class="lead">Hi! I studied economics and statistics at the University of Nairobi. This fall I am starting my Master of Science in Economics at Rensselaer Polytechnic Institute in Troy, New York, with a merit-award scholarship.</p>
 
                 <p>In my senior year, I co-authored a health economics paper examining the effects of health insurance on healthcare utilization in Kenya.</p>
 
@@ -113,14 +94,16 @@
                     <a href="https://web.mit.edu/krugman/www/howiwork.html" target="_blank" rel="noopener">here</a>.
                 </p>
 
-                <p>You can reach me at <a href="mailto:abdelkhalekjama@gmail.com">abdelkhalekjama@gmail.com</a>.</p>
-            </main>
+                <p class="contact">
+                    <a href="mailto:abdelkhalekjama@gmail.com">abdelkhalekjama@gmail.com</a><span>·</span><a href="https://github.com/abdikhaliq-jama" target="_blank" rel="noopener">GitHub</a>
+                </p>
+            </div>
 
         </div>
-    </div>
+    </main>
 
-    <footer class="foot">
-        <div class="wrap">&copy; 2026 Abdikhaliq Jama.</div>
+    <footer>
+        <div class="wrap">&copy; 2026 Abdikhaliq Jama</div>
     </footer>
 
 </body>
