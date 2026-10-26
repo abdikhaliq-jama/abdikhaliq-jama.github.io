@@ -6,26 +6,42 @@
     <title>Writing | Abdikhaliq Jama</title>
     <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,700;1,400;1,700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
-        <link rel="icon" type="image/png" href="favicon.png">
+
+    <style>
+        /* Header, same as the About page */
+        .bar { border-bottom: 1px solid #e5e7eb; }
+        .bar .wrap { max-width: 980px; margin: 0 auto; padding: 0 28px; display: flex; justify-content: space-between; align-items: center; height: 58px; box-sizing: border-box; }
+        .brand { font-size: 21px; font-weight: 700; color: #2a2a8f; text-decoration: none; line-height: 1.2; }
+        .menu { display: flex; gap: 4px; height: 100%; }
+        .menu a { display: flex; align-items: center; padding: 0 12px; color: #5b6472; font-size: 16px; line-height: 1.2; text-decoration: none; border-bottom: 2px solid transparent; margin-top: 2px; }
+        .menu a:hover { color: #1f2430; }
+        .menu a[aria-current="page"] { color: #2a2a8f; font-weight: 700; border-bottom-color: #2a2a8f; }
+        @media (max-width: 800px) {
+            .bar .wrap { height: auto; flex-direction: column; gap: 4px; padding-top: 12px; }
+            .menu { height: 40px; }
+        }
+    </style>
 </head>
 
 <body class="blog">
 
-    <div class="top">
-        <h1><a href="index.html">Abdikhaliq Jama</a></h1>
-        <nav class="nav" aria-label="Main">
-            <a href="index.html">About</a>
-            <a href="blog.html" aria-current="page">Writing</a>
-        </nav>
-    </div>
+    <header class="bar">
+        <div class="wrap">
+            <a class="brand" href="index.html">Abdikhaliq Jama</a>
+            <nav class="menu" aria-label="Main">
+                <a href="index.html">About</a>
+                <a href="blog.html" aria-current="page">Writing</a>
+            </nav>
+        </div>
+    </header>
 
     <main class="column">
         <header class="blog-head">
             <h2>Writing</h2>
             <p>Essays and working notes on economics, data, and the books in between.</p>
         </header>
-                <p style="margin: 40px 0 0; padding: 24px 0; border-top: 1px solid var(--ink); font-size: 22px; line-height: 1.5; font-style: italic; color: #333">The first essay is on its way. Check back soon, or write to me at <a href="mailto:abdelkhalekjama@gmail.com">abdelkhalekjama@gmail.com</a>.</p>
-        </ul>
+
+        <p style="margin: 40px 0 0; padding: 24px 0; border-top: 1px solid var(--ink); font-size: 22px; line-height: 1.5; font-style: italic; color: #333">The first essay is on its way. Check back soon, or write to me at <a href="mailto:abdelkhalekjama@gmail.com">abdelkhalekjama@gmail.com</a>.</p>
     </main>
 
     <footer class="site-footer">
