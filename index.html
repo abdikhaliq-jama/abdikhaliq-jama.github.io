@@ -4,40 +4,130 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Abdikhaliq Jama</title>
-    <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,700;1,400;1,700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
-        <link rel="icon" type="image/png" href="favicon.png">
+    <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,700;1,400&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --ink: #1f2430;
+            --muted: #5b6472;
+            --link: #2a2a8f;
+            --line: #e5e7eb;
+        }
+
+        * { box-sizing: border-box; }
+
+        body {
+            margin: 0;
+            background: #fff;
+            color: var(--ink);
+            font-family: "EB Garamond", Garamond, "Times New Roman", serif;
+            font-size: 20px;
+            line-height: 1.7;
+        }
+
+        a { color: var(--link); text-decoration: none; }
+        a:hover { text-decoration: underline; }
+        a:focus-visible { outline: 2px solid var(--link); outline-offset: 3px; }
+
+        .wrap { max-width: 1100px; margin: 0 auto; padding: 0 32px; }
+
+        /* Top bar */
+        .bar { border-bottom: 1px solid var(--line); }
+        .bar .wrap { display: flex; justify-content: space-between; align-items: center; height: 72px; }
+        .brand { font-size: 26px; font-weight: 700; color: var(--link); }
+        .brand:hover { text-decoration: none; }
+        .menu { display: flex; gap: 8px; height: 100%; }
+        .menu a { display: flex; align-items: center; padding: 0 14px; color: var(--muted); font-size: 19px; border-bottom: 3px solid transparent; margin-top: 3px; }
+        .menu a:hover { color: var(--ink); text-decoration: none; }
+        .menu a[aria-current="page"] { color: var(--link); font-weight: 700; border-bottom-color: var(--link); }
+
+        /* Page body */
+        .page { display: grid; grid-template-columns: 300px 1fr; gap: 64px; padding: 64px 0 80px; align-items: start; }
+
+        .side img { width: 100%; aspect-ratio: 4 / 5; object-fit: cover; border-radius: 6px; display: block; }
+        .side h1 { font-size: 32px; line-height: 1.2; font-weight: 700; color: var(--link); margin: 24px 0 6px; }
+        .side .role { margin: 0; color: var(--muted); font-size: 19px; line-height: 1.45; }
+        .side hr { border: 0; border-top: 1px solid var(--line); margin: 24px 0; }
+
+        .contact { list-style: none; margin: 0; padding: 0; }
+        .contact li { display: flex; align-items: center; gap: 14px; margin: 0 0 14px; font-size: 18px; line-height: 1.3; }
+        .contact svg { width: 18px; height: 18px; flex: none; fill: var(--ink); }
+        .contact a { color: var(--ink); }
+        .contact a:hover { color: var(--link); }
+
+        .main p { margin: 0 0 22px; }
+        .main strong { color: var(--link); }
+
+        /* Footer */
+        .foot { background: #f4f5f8; border-top: 1px solid var(--line); color: var(--muted); font-size: 17px; }
+        .foot .wrap { padding-top: 28px; padding-bottom: 28px; }
+
+        @media (max-width: 800px) {
+            .page { grid-template-columns: 1fr; gap: 32px; padding: 40px 0 56px; }
+            .side { max-width: 300px; }
+            .bar .wrap { height: auto; flex-direction: column; gap: 8px; padding-top: 14px; }
+            .menu { height: 44px; }
+        }
+    </style>
 </head>
 
 <body>
 
-    <div class="top">
-        <h1><a href="index.html">Abdikhaliq Jama</a></h1>
-        <nav class="nav" aria-label="Main">
-            <a href="index.html" aria-current="page">About</a>
-            <a href="blog.html">Writing</a>
-        </nav>
-    </div>
+    <header class="bar">
+        <div class="wrap">
+            <a class="brand" href="index.html">Abdikhaliq Jama</a>
+            <nav class="menu" aria-label="Main">
+                <a href="index.html" aria-current="page">About</a>
+                <a href="blog.html">Writing</a>
+                <a href="misc/index.html">Misc</a>
+            </nav>
+        </div>
+    </header>
 
-    <div class="intro">
-        <img src="profile.jpeg" alt="Abdikhaliq Jama" class="profile-pic">
+    <div class="wrap">
+        <div class="page">
 
-        <div class="intro-text">
-            <p>Hi! I studied economics and statistics at the University of Nairobi. This fall I am starting my Master of Science in Economics at Rensselaer Polytechnic Institute in Troy, New York, with a merit-award scholarship.</p>
+            <aside class="side">
+                <img src="profile.jpeg" alt="Abdikhaliq Jama">
+                <h1>Abdikhaliq Jama</h1>
+                <p class="role">MSc Student in Economics<br>Rensselaer Polytechnic Institute</p>
+                <hr>
+                <ul class="contact">
+                    <li>
+                        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a7 7 0 0 0-7 7c0 5.2 7 13 7 13s7-7.8 7-13a7 7 0 0 0-7-7zm0 9.5A2.5 2.5 0 1 1 12 6.5a2.5 2.5 0 0 1 0 5z"/></svg>
+                        <span>Troy, New York, USA</span>
+                    </li>
+                    <li>
+                        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M2 5h20v2.3l-10 6.2L2 7.3V5zm0 4.7 10 6.2 10-6.2V19H2V9.7z"/></svg>
+                        <a href="mailto:abdelkhalekjama@gmail.com">abdelkhalekjama@gmail.com</a>
+                    </li>
+                    <li>
+                        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a10 10 0 0 0-3.2 19.5c.5.1.7-.2.7-.5v-1.8c-2.8.6-3.4-1.2-3.4-1.2-.5-1.1-1.1-1.4-1.1-1.4-.9-.6.1-.6.1-.6 1 .1 1.5 1 1.5 1 .9 1.500 2.300 1.100 2.900.8.1-.7.4-1.100.6-1.400-2.200-.3-4.600-1.100-4.600-5 0-1.100.4-2 1-2.700-.1-.3-.4-1.300.1-2.700 0 0 .8-.3 2.800 1a9.600 9.600 0 0 1 5 0c1.900-1.300 2.800-1 2.800-1 .5 1.400.2 2.400.1 2.700.6.7 1 1.600 1 2.700 0 3.900-2.400 4.700-4.600 5 .4.3.7.9.7 1.900v2.800c0 .3.2.6.7.5A10 10 0 0 0 12 2z"/></svg>
+                        <a href="https://github.com/abdikhaliq-jama" target="_blank" rel="noopener">GitHub</a>
+                    </li>
+                </ul>
+            </aside>
 
-            <p>In my senior year, I co-authored a health economics paper examining the effects of health insurance on healthcare utilization in Kenya.</p>
+            <main class="main">
+                <p>Hi! I studied economics and statistics at the University of Nairobi. This fall I am starting my Master of Science in Economics at Rensselaer Polytechnic Institute in Troy, New York, with a merit-award scholarship.</p>
 
-            <p>When I am not reading economics or inverting matrices, I chew gum and read literature and psychology. Pieces that have influenced me lately are from Paul Krugman and Richard Hamming, and you can find them
-                <a href="https://www.princeton.edu/~pkrugman/incidents.html" target="_blank">here</a>,
-                <a href="https://www.cs.virginia.edu/~robins/YouAndYourResearch.html" target="_blank">here</a>, and
-                <a href="https://web.mit.edu/krugman/www/howiwork.html" target="_blank">here</a>.
-            </p>
+                <p>In my senior year, I co-authored a health economics paper examining the effects of health insurance on healthcare utilization in Kenya.</p>
 
-            <p>You can reach me at
-                <a href="mailto:abdelkhalekjama@gmail.com">abdelkhalekjama@gmail.com</a>.
-            </p>
+                <p>When I am not reading economics or inverting matrices, I chew gum and read literature and psychology. Pieces that have influenced me lately are from Paul Krugman and Richard Hamming, and you can find them
+                    <a href="https://www.princeton.edu/~pkrugman/incidents.html" target="_blank" rel="noopener">here</a>,
+                    <a href="https://www.cs.virginia.edu/~robins/YouAndYourResearch.html" target="_blank" rel="noopener">here</a>, and
+                    <a href="https://web.mit.edu/krugman/www/howiwork.html" target="_blank" rel="noopener">here</a>.
+                </p>
+
+                <p>You can reach me at <a href="mailto:abdelkhalekjama@gmail.com">abdelkhalekjama@gmail.com</a>.</p>
+            </main>
+
         </div>
     </div>
+
+    <footer class="foot">
+        <div class="wrap">&copy; 2026 Abdikhaliq Jama.</div>
+    </footer>
 
 </body>
 </html>
