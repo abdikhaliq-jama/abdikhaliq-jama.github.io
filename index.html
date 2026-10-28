@@ -9,17 +9,18 @@
 
     <style>
         :root {
+            --bg: #dff3e8;
             --ink: #1a1a1a;
-            --muted: #666;
+            --muted: #555;
             --link: #2a2a8f;
-            --line: #e6e6e6;
+            --line: rgba(0, 0, 0, 0.12);
         }
 
         * { box-sizing: border-box; }
 
         body {
             margin: 0;
-            background: #fff;
+            background: var(--bg);
             color: var(--ink);
             font-family: "EB Garamond", Garamond, "Times New Roman", serif;
             font-size: 18px;
@@ -49,7 +50,7 @@
 
         .text p { margin: 0 0 18px; }
         .contact { margin-top: 28px; padding-top: 18px; border-top: 1px solid var(--line); font-size: 16px; color: var(--muted); }
-        .contact span { margin: 0 8px; color: #bbb; }
+        .contact span { margin: 0 8px; color: #999; }
 
         footer { border-top: 1px solid var(--line); }
         footer .wrap { padding-top: 18px; padding-bottom: 28px; font-size: 14px; color: var(--muted); }
@@ -59,51 +60,3 @@
             .page { grid-template-columns: 1fr; gap: 28px; padding: 36px 0 48px; }
             .photo { max-width: 220px; }
         }
-    </style>
-</head>
-
-<body>
-
-    <header>
-        <div class="wrap">
-            <a class="brand" href="index.html">Abdikhaliq Jama</a>
-            <nav aria-label="Main">
-                <a href="index.html" aria-current="page">About</a>
-                <a href="blog.html">Writing</a>
-            </nav>
-        </div>
-    </header>
-
-    <main class="wrap">
-        <div class="page">
-
-            <div class="photo">
-                <img src="profile.jpeg" alt="Abdikhaliq Jama">
-                <p>Incoming MSc in Economics student</p>
-            </div>
-
-            <div class="text">
-                <p>Hi! I studied economics and statistics at the University of Nairobi. This fall I am starting my Master of Science in Economics at Rensselaer Polytechnic Institute in Troy, New York, with a merit-award scholarship.</p>
-
-                <p>In my senior year, I co-authored a health economics paper examining the effects of health insurance on healthcare utilization in Kenya.</p>
-
-                <p>When I am not reading economics or inverting matrices, I chew gum and read literature and psychology. Pieces that have influenced me lately are from Paul Krugman and Richard Hamming, and you can find them
-                    <a href="https://www.princeton.edu/~pkrugman/incidents.html" target="_blank" rel="noopener">here</a>,
-                    <a href="https://www.cs.virginia.edu/~robins/YouAndYourResearch.html" target="_blank" rel="noopener">here</a>, and
-                    <a href="https://web.mit.edu/krugman/www/howiwork.html" target="_blank" rel="noopener">here</a>.
-                </p>
-
-                <p class="contact">
-                    <a href="mailto:abdelkhalekjama@gmail.com">abdelkhalekjama@gmail.com</a><span>·</span><a href="https://github.com/abdikhaliq-jama" target="_blank" rel="noopener">GitHub</a>
-                </p>
-            </div>
-
-        </div>
-    </main>
-
-    <footer>
-        <div class="wrap">&copy; 2026 Abdikhaliq Jama</div>
-    </footer>
-
-</body>
-</html>
