@@ -10,47 +10,50 @@
         body {
             margin: 0;
             background: #fff;
-            color: #222;
-            font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-            font-size: 17px;
-            line-height: 1.55;
+            color: #333;
+            font-family: Helvetica, Arial, sans-serif;
+            font-size: 13px;
+            line-height: 1.4;
         }
 
-        a { color: #1a56c4; }
-        a:hover { color: #0f3a8a; }
+        a { color: #2b62c0; }
 
-        /* Menu: name and links, top right */
+        /* Name and menu, top right */
         .menu {
             position: absolute;
-            top: 32px;
-            right: 22px;
+            top: 35.25px;
+            right: 24px;
             text-align: right;
-            line-height: 1.7;
+            line-height: 1.25;
         }
         .menu span { display: block; color: #000; }
         .menu a { display: block; }
 
         /* Text column */
         main {
-            max-width: 450px;
-            margin: 32px 0 90px clamp(20px, 14vw, 182px);
+            margin-left: clamp(20px, 14.13vw, 300px);
+            width: 500px;
+            padding-top: 35.25px;
+            padding-bottom: 80px;
         }
 
         .photo {
-            width: 117px;
-            height: 117px;
-            object-fit: cover;
+            width: 130px;
+            height: 130px;
+            overflow: hidden;
+            margin-bottom: 13px;
+        }
+        .photo img {
             display: block;
-            margin-bottom: 20px;
+            width: 210px;
+            margin: -4px 0 0 -40px;
         }
 
-        main p { margin: 0 0 16px; }
+        p { margin: 13px 0; }
 
-        @media (max-width: 700px) {
-            .menu { position: static; text-align: left; display: flex; flex-wrap: wrap; gap: 6px 16px; padding: 20px 20px 0; }
-            .menu span { width: 100%; }
-            .menu a { display: inline; }
-            main { margin: 24px 20px 60px; }
+        @media (max-width: 760px) {
+            .menu { position: static; text-align: left; padding: 20px 20px 0; }
+            main { margin: 0 20px; width: auto; padding-top: 20px; }
         }
     </style>
 </head>
@@ -64,7 +67,7 @@
     </div>
 
     <main>
-        <img class="photo" src="profile.jpeg" alt="Abdikhaliq Jama">
+        <div class="photo"><img src="profile.jpeg" alt="Abdikhaliq Jama"></div>
 
         <p>Hi! I studied economics and statistics at the University of Nairobi. This fall I am starting my Master of Science in Economics at Rensselaer Polytechnic Institute in Troy, New York, with a merit-award scholarship.</p>
 
