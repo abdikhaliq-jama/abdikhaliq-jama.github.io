@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -16,45 +17,81 @@
             line-height: 1.4;
         }
 
-        a { color: #2b62c0; }
+        a {
+            color: #2b62c0;
+        }
+
+        a:hover {
+            color: #0f3a8a;
+        }
 
         /* Name and menu, top right */
+
         .menu {
             position: absolute;
-            top: 35.25px;
-            right: 24px;
+            top: 41px;
+            right: 28px;
             text-align: right;
             line-height: 1.25;
         }
-        .menu span { display: block; color: #000; }
-        .menu a { display: block; }
 
-        /* Text column */
+        .menu span {
+            display: block;
+            color: #000;
+        }
+
+        .menu a {
+            display: block;
+        }
+
+        /* Main content column */
+
         main {
-            margin-left: clamp(20px, 14.13vw, 300px);
-            width: 500px;
-            padding-top: 35.25px;
+            margin-left: 14.13vw;
+            width: 575px;
+            padding-top: 41px;
             padding-bottom: 80px;
         }
 
+        /* Profile photograph */
+
         .photo {
-            width: 130px;
-            height: 140px;
+            width: 150px;
+            height: 150px;
+            margin-bottom: 16px;
             overflow: hidden;
-            margin-bottom: 13px;
         }
+
         .photo img {
             display: block;
-            width: 130px;
-            margin: -4px 0 0 -60px;
+            width: 150px;
+            height: 150px;
+            object-fit: cover;
+            object-position: center 25%;
         }
 
-        p { margin: 13px 0; }
+        p {
+            margin: 13px 0;
+        }
+
+        /* Mobile layout */
 
         @media (max-width: 760px) {
-            .menu { position: static; text-align: left; padding: 20px 20px 0; }
-            main { margin: 0 20px; width: auto; padding-top: 20px; }
+
+            .menu {
+                position: static;
+                text-align: left;
+                padding: 20px 20px 0;
+            }
+
+            main {
+                margin: 0 20px;
+                width: auto;
+                padding-top: 25px;
+            }
+
         }
+
     </style>
 </head>
 
@@ -67,18 +104,44 @@
     </div>
 
     <main>
-        <div class="photo"><img src="profile.jpeg" alt="Abdikhaliq Mohamed"></div>
 
-        <p>Hi! I studied economics and statistics at the University of Nairobi. This fall I am starting my Master of Science in Economics at Rensselaer Polytechnic Institute in Troy, New York, with a merit-award scholarship.</p>
+        <div class="photo">
+            <img src="profile.jpeg" alt="Abdikhaliq Mohamed">
+        </div>
 
-        <p>In my senior year, I co-authored a health economics paper examining the effects of health insurance on healthcare utilization in Kenya.</p>
-
-        <p>When I am not reading economics or inverting matrices, I chew gum and read literature and psychology. Pieces that have influenced me lately are from Paul Krugman and Richard Hamming, and you can find them
-            <a href="https://www.princeton.edu/~pkrugman/incidents.html" target="_blank" rel="noopener">here</a>,
-            <a href="https://www.cs.virginia.edu/~robins/YouAndYourResearch.html" target="_blank" rel="noopener">here</a>, and
-            <a href="https://web.mit.edu/krugman/www/howiwork.html" target="_blank" rel="noopener">here</a>.
-       <p>Email: <a href="mailto:abdelkhalekjama@gmail.com">abdelkhalekjama@gmail.com</a></p>
+        <p>
+            Hi! I studied economics and statistics at the University of Nairobi.
+            This fall I am starting my Master of Science in Economics at
+            Rensselaer Polytechnic Institute in Troy, New York, with a
+            merit-award scholarship.
         </p>
+
+        <p>
+            In my senior year, I co-authored a health economics paper
+            examining the effects of health insurance on healthcare
+            utilization in Kenya.
+        </p>
+
+        <p>
+            When I am not reading economics or inverting matrices, I chew gum
+            and read literature and psychology. Pieces that have influenced
+            me lately are from Paul Krugman and Richard Hamming, and you can
+            find them
+            <a href="https://www.princeton.edu/~pkrugman/incidents.html"
+               target="_blank" rel="noopener">here</a>,
+            <a href="https://www.cs.virginia.edu/~robins/YouAndYourResearch.html"
+               target="_blank" rel="noopener">here</a>, and
+            <a href="https://web.mit.edu/krugman/www/howiwork.html"
+               target="_blank" rel="noopener">here</a>.
+        </p>
+
+        <p>
+            Email:
+            <a href="mailto:abdelkhalekjama@gmail.com">
+                abdelkhalekjama@gmail.com
+            </a>
+        </p>
+
     </main>
 
 </body>
