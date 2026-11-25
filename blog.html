@@ -20,21 +20,45 @@
         a:hover { color: #0f3a8a; }
 
         /* Menu: name and links, top right */
-        .menu {
-            position: absolute;
-            top: 32px;
-            right: 22px;
-            text-align: right;
-            line-height: 1.7;
-        }
-        .menu span { display: block; color: #000; }
-        .menu a { display: block; }
+        
+/* Navigation: identical across all pages */
 
-        /* Text column */
-        main {
-            max-width: 450px;
-            margin: 32px 0 90px clamp(20px, 14vw, 182px);
-        }
+.menu {
+    position: absolute;
+    top: 41px;
+    right: 28px;
+    text-align: right;
+    line-height: 1.25;
+}
+
+.menu span {
+    display: block;
+    color: #000;
+}
+
+.menu a {
+    display: block;
+}
+
+/* Mobile navigation */
+
+@media (max-width: 760px) {
+    .menu {
+        position: static;
+        text-align: left;
+        padding: 20px 20px 0;
+        line-height: 1.25;
+    }
+
+    .menu span {
+        margin-bottom: 0;
+    }
+
+    .menu a {
+        display: block;
+    }
+}
+
 
         h1 { margin: 0 0 14px; font-size: 17px; font-weight: 700; }
         main p { margin: 0 0 16px; }
