@@ -1,136 +1,58 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     <title>Writing | Abdikhaliq Mohamed</title>
     <link rel="icon" type="image/png" href="favicon.png">
 
     <style>
-        * {
-            box-sizing: border-box;
-        }
-
         body {
             margin: 0;
             background: #fff;
             color: #222;
-            font-family: Arial, Helvetica, sans-serif;
-            font-size: 16px;
-            line-height: 1.35;
+            font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+            font-size: 12px;
+            line-height: 1.4;
         }
 
-        a {
-            color: #06c;
-            text-decoration: underline;
-        }
+        a { color: #1a56c4; }
+        a:hover { color: #0f3a8a; }
 
-        a:hover {
-            color: #004b99;
-        }
-
-        /* Top-right navigation */
-
+        /* Menu: name and links, top right */
         .menu {
             position: absolute;
-            top: 38px;
-            right: 38px;
+            top: 32px;
+            right: 22px;
             text-align: right;
-            line-height: 1.25;
+            line-height: 1.7;
         }
+        .menu span { display: block; color: #000; }
+        .menu a { display: block; }
 
-        .menu span {
-            display: block;
-            color: #000;
-        }
-
-        .menu a {
-            display: block;
-        }
-
-        /* Main content column */
-
+        /* Text column */
         main {
-            width: 575px;
-            max-width: calc(100% - 40px);
-            margin: 41px 0 90px 14vw;
+            max-width: 450px;
+            margin: 32px 0 90px clamp(20px, 14vw, 182px);
         }
 
-        /* Profile picture */
+        h1 { margin: 0 0 14px; font-size: 17px; font-weight: 700; }
+        main p { margin: 0 0 16px; }
 
-        .profile-pic {
-            width: 150px;
-            height: 150px;
-            object-fit: cover;
-            object-position: center 25%;
-            display: block;
-            margin-bottom: 16px;
-        }
-
-        h1 {
-            font-size: 20px;
-            font-weight: 600;
-            margin: 0 0 14px;
-        }
-
-        main p {
-            margin: 0 0 16px;
-        }
-
-        ul.posts {
-            margin: 0;
-            padding-left: 24px;
-        }
-
-        ul.posts li {
-            margin-bottom: 12px;
-        }
-
-        ul.posts .date {
-            color: #777;
-            font-size: 14px;
-        }
-
-        /* Mobile layout */
+        ul.posts { margin: 0; padding-left: 24px; }
+        ul.posts li { margin: 0 0 10px; }
+        ul.posts .date { color: #777; font-size: 15px; }
 
         @media (max-width: 700px) {
-
-            .menu {
-                position: static;
-                text-align: left;
-                padding: 20px 20px 0;
-                line-height: 1.6;
-            }
-
-            .menu span {
-                margin-bottom: 4px;
-            }
-
-            .menu a {
-                display: inline-block;
-                margin-right: 12px;
-            }
-
-            main {
-                width: auto;
-                max-width: none;
-                margin: 30px 20px 60px;
-            }
-
-            .profile-pic {
-                width: 130px;
-                height: 130px;
-            }
+            .menu { position: static; text-align: left; display: flex; flex-wrap: wrap; gap: 6px 16px; padding: 20px 20px 0; }
+            .menu span { width: 100%; }
+            .menu a { display: inline; }
+            main { margin: 24px 20px 60px; }
         }
-
     </style>
 </head>
 
 <body>
-
-    <!-- Navigation -->
 
     <div class="menu">
         <span>Abdikhaliq Mohamed</span>
@@ -138,36 +60,21 @@
         <a href="blog.html">Writing</a>
     </div>
 
-    <!-- Main content -->
-
     <main>
-
-        <img
-            src="profile.jpg"
-            alt="Abdikhaliq Mohamed"
-            class="profile-pic"
-        >
-
         <h1>Writing</h1>
 
-        <p>
-            Essays and working notes on economics, data,
-            and the books in between.
-        </p>
+        <p>Essays and working notes on economics, data, and the books in between.</p>
 
+        <!-- Delete this paragraph when you publish your first post -->
         <p>The first essay is on its way.</p>
 
-        <!-- Add published essays here -->
+        <!-- When you have posts, remove the paragraph above and un-comment this list.
+             Each post is one <li>, newest first.
 
-        <!--
         <ul class="posts">
-            <li>
-                <a href="my-first-essay.html">Your post title</a>
-                <span class="date">Nov 3, 2026</span>
-            </li>
+            <li><a href="my-first-essay.html">Your post title</a> <span class="date">Nov 3, 2026</span></li>
         </ul>
         -->
-
     </main>
 
 </body>
