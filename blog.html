@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>Writing | Abdikhaliq Mohamed</title>
     <link rel="icon" type="image/png" href="favicon.png">
 
@@ -10,95 +11,138 @@
         body {
             margin: 0;
             background: #fff;
-            color: #222;
-            font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+            color: #333;
+            font-family: Helvetica, Arial, sans-serif;
             font-size: 12px;
             line-height: 1.4;
         }
 
-        a { color: #1a56c4; }
-        a:hover { color: #0f3a8a; }
-
-        /* Menu: name and links, top right */
-        
-/* Navigation: identical across all pages */
-
-.menu {
-    position: absolute;
-    top: 41px;
-    right: 28px;
-    text-align: right;
-    line-height: 1.25;
-}
-
-.menu span {
-    display: block;
-    color: #000;
-}
-
-.menu a {
-    display: block;
-}
-
-/* Mobile navigation */
-
-@media (max-width: 760px) {
-    .menu {
-        position: static;
-        text-align: left;
-        padding: 20px 20px 0;
-        line-height: 1.25;
-    }
-
-    .menu span {
-        margin-bottom: 0;
-    }
-
-    .menu a {
-        display: block;
-    }
-}
-
-
-        h1 { margin: 0 0 14px; font-size: 17px; font-weight: 700; }
-        main p { margin: 0 0 16px; }
-
-        ul.posts { margin: 0; padding-left: 24px; }
-        ul.posts li { margin: 0 0 10px; }
-        ul.posts .date { color: #777; font-size: 15px; }
-
-        @media (max-width: 700px) {
-            .menu { position: static; text-align: left; display: flex; flex-wrap: wrap; gap: 6px 16px; padding: 20px 20px 0; }
-            .menu span { width: 100%; }
-            .menu a { display: inline; }
-            main { margin: 24px 20px 60px; }
+        a {
+            color: #2b62c0;
         }
+
+        a:hover {
+            color: #0f3a8a;
+        }
+
+        /* Navigation: identical across all pages */
+
+        .menu {
+            position: absolute;
+            top: 41px;
+            right: 28px;
+            text-align: right;
+            line-height: 1.25;
+        }
+
+        .menu span {
+            display: block;
+            color: #000;
+        }
+
+        .menu a {
+            display: block;
+        }
+
+        /* Main content column */
+
+        main {
+            margin-left: 14.13vw;
+            width: 575px;
+            padding-top: 41px;
+            padding-bottom: 80px;
+        }
+
+        h1 {
+            margin: 0 0 14px;
+            font-size: 17px;
+            font-weight: 700;
+        }
+
+        main p {
+            margin: 13px 0;
+        }
+
+        /* Published essays */
+
+        ul.posts {
+            margin: 0;
+            padding-left: 24px;
+        }
+
+        ul.posts li {
+            margin: 0 0 10px;
+        }
+
+        ul.posts .date {
+            color: #777;
+            font-size: 12px;
+        }
+
+        /* Mobile layout: identical across all pages */
+
+        @media (max-width: 760px) {
+
+            .menu {
+                position: static;
+                text-align: left;
+                padding: 20px 20px 0;
+                line-height: 1.25;
+            }
+
+            .menu span {
+                margin-bottom: 0;
+            }
+
+            .menu a {
+                display: block;
+            }
+
+            main {
+                margin: 0 20px;
+                width: auto;
+                padding-top: 25px;
+            }
+        }
+
     </style>
 </head>
 
 <body>
-    
+
+    <!-- Navigation -->
+
     <div class="menu">
-    <span>Abdikhaliq Mohamed</span>
-    <a href="index.html">About</a>
-    <a href="blog.html">Writing</a>
-</div>
+        <span>Abdikhaliq Mohamed</span>
+        <a href="index.html">About</a>
+        <a href="blog.html">Writing</a>
+    </div>
+
+    <!-- Writing section -->
 
     <main>
+
         <h1>Writing</h1>
 
-        <p>Essays and working notes on economics, data, and the books in between.</p>
+        <p>
+            Essays and working notes on economics, data,
+            and the books in between.
+        </p>
 
-        <!-- Delete this paragraph when you publish your first post -->
         <p>The first essay is on its way.</p>
 
-        <!-- When you have posts, remove the paragraph above and un-comment this list.
-             Each post is one <li>, newest first.
+        <!--
+        When you publish your first essay, remove the
+        paragraph above and uncomment the list below.
 
         <ul class="posts">
-            <li><a href="my-first-essay.html">Your post title</a> <span class="date">Nov 3, 2026</span></li>
+            <li>
+                <a href="my-first-essay.html">Your post title</a>
+                <span class="date">Nov 3, 2026</span>
+            </li>
         </ul>
         -->
+
     </main>
 
 </body>
