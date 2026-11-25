@@ -5,94 +5,76 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Abdikhaliq Jama</title>
     <link rel="icon" type="image/png" href="favicon.png">
-    <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
 
     <style>
-        :root {
-            --bg: #14171c;
-            --ink: #ebe8e1;
-            --muted: #9a9aa3;
-            --gold: #e3b45c;
-            --link: #7cb3ff;
-            --line: rgba(255, 255, 255, 0.16);
-        }
-
-        * { box-sizing: border-box; }
-
         body {
             margin: 0;
-            background: var(--bg);
-            color: var(--ink);
-            font-family: "EB Garamond", Garamond, "Times New Roman", serif;
-            font-size: 18px;
-            line-height: 1.6;
+            background: #fff;
+            color: #222;
+            font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+            font-size: 17px;
+            line-height: 1.55;
         }
 
-        a { color: var(--link); text-underline-offset: 3px; }
-        a:hover { color: #b8d5ff; }
-        a:focus-visible { outline: 2px solid var(--link); outline-offset: 3px; }
+        a { color: #1a56c4; }
+        a:hover { color: #0f3a8a; }
 
-        .wrap { max-width: 860px; margin: 0 auto; padding: 0 28px; }
+        /* Menu: name and links, top right */
+        .menu {
+            position: absolute;
+            top: 32px;
+            right: 22px;
+            text-align: right;
+            line-height: 1.7;
+        }
+        .menu span { display: block; color: #000; }
+        .menu a { display: block; }
 
-        /* Header */
-        header { border-bottom: 1px solid var(--line); }
-        header .wrap { display: flex; justify-content: space-between; align-items: baseline; padding-top: 22px; padding-bottom: 18px; }
-        .brand { font-size: 22px; font-style: italic; color: var(--ink); text-decoration: none; }
-        .brand:hover { color: var(--ink); }
-        nav { display: flex; gap: 26px; font-size: 17px; }
-        nav a { color: var(--muted); text-decoration: none; padding-bottom: 2px; border-bottom: 1px solid transparent; }
-        nav a:hover { color: var(--ink); }
-        nav a[aria-current="page"] { color: var(--ink); border-bottom-color: var(--gold); }
+        /* Text column */
+        main {
+            max-width: 450px;
+            margin: 32px 0 90px clamp(20px, 14vw, 182px);
+        }
 
-        /* Content */
-        .page { display: grid; grid-template-columns: 160px 1fr; gap: 44px; padding: 52px 0 72px; align-items: start; }
+        .photo {
+            width: 117px;
+            height: 117px;
+            object-fit: cover;
+            display: block;
+            margin-bottom: 20px;
+        }
 
-        .photo img { width: 100%; aspect-ratio: 4 / 5; object-fit: cover; border-radius: 0; display: block; }
-        .photo p { margin: 10px 0 0; font-size: 14px; font-style: italic; color: var(--muted); line-height: 1.4; }
-
-        .text p { margin: 0 0 18px; }
+        main p { margin: 0 0 16px; }
 
         @media (max-width: 700px) {
-            header .wrap { flex-direction: column; align-items: flex-start; gap: 8px; }
-            .page { grid-template-columns: 1fr; gap: 28px; padding: 36px 0 48px; }
-            .photo { max-width: 160px; }
+            .menu { position: static; text-align: left; display: flex; flex-wrap: wrap; gap: 6px 16px; padding: 20px 20px 0; }
+            .menu span { width: 100%; }
+            .menu a { display: inline; }
+            main { margin: 24px 20px 60px; }
         }
     </style>
 </head>
 
 <body>
 
-    <header>
-        <div class="wrap">
-            <a class="brand" href="index.html">Abdikhaliq Jama</a>
-            <nav aria-label="Main">
-                <a href="index.html" aria-current="page">About</a>
-                <a href="blog.html">Writing</a>
-            </nav>
-        </div>
-    </header>
+    <div class="menu">
+        <span>Abdikhaliq Jama</span>
+        <a href="index.html">About</a>
+        <a href="blog.html">Writing</a>
+    </div>
 
-    <main class="wrap">
-        <div class="page">
+    <main>
+        <img class="photo" src="profile.jpeg" alt="Abdikhaliq Jama">
 
-            <div class="photo">
-                <img src="profile.jpeg" alt="Abdikhaliq Jama">
-                <p>Incoming MSc in Economics student</p>
-            </div>
+        <p>Hi! I studied economics and statistics at the University of Nairobi. This fall I am starting my Master of Science in Economics at Rensselaer Polytechnic Institute in Troy, New York, with a merit-award scholarship.</p>
 
-            <div class="text">
-                <p>Hi! I studied economics and statistics at the University of Nairobi. This fall I am starting my Master of Science in Economics at Rensselaer Polytechnic Institute in Troy, New York, with a merit-award scholarship.</p>
+        <p>In my senior year, I co-authored a health economics paper examining the effects of health insurance on healthcare utilization in Kenya.</p>
 
-                <p>In my senior year, I co-authored a health economics paper examining the effects of health insurance on healthcare utilization in Kenya.</p>
-
-                <p>When I am not reading economics or inverting matrices, I chew gum and read literature and psychology. Pieces that have influenced me lately are from Paul Krugman and Richard Hamming, and you can find them
-                    <a href="https://www.princeton.edu/~pkrugman/incidents.html" target="_blank" rel="noopener">here</a>,
-                    <a href="https://www.cs.virginia.edu/~robins/YouAndYourResearch.html" target="_blank" rel="noopener">here</a>, and
-                    <a href="https://web.mit.edu/krugman/www/howiwork.html" target="_blank" rel="noopener">here</a>.
-                </p>
-            </div>
-
-        </div>
+        <p>When I am not reading economics or inverting matrices, I chew gum and read literature and psychology. Pieces that have influenced me lately are from Paul Krugman and Richard Hamming, and you can find them
+            <a href="https://www.princeton.edu/~pkrugman/incidents.html" target="_blank" rel="noopener">here</a>,
+            <a href="https://www.cs.virginia.edu/~robins/YouAndYourResearch.html" target="_blank" rel="noopener">here</a>, and
+            <a href="https://web.mit.edu/krugman/www/howiwork.html" target="_blank" rel="noopener">here</a>.
+        </p>
     </main>
 
 </body>
