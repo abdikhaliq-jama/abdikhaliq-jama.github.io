@@ -27,22 +27,44 @@
 
         /* Name and menu, top right */
 
-        .menu {
-            position: absolute;
-            top: 41px;
-            right: 28px;
-            text-align: right;
-            line-height: 1.25;
-        }
+       
+/* Navigation: identical across all pages */
 
-        .menu span {
-            display: block;
-            color: #000;
-        }
+.menu {
+    position: absolute;
+    top: 41px;
+    right: 28px;
+    text-align: right;
+    line-height: 1.25;
+}
 
-        .menu a {
-            display: block;
-        }
+.menu span {
+    display: block;
+    color: #000;
+}
+
+.menu a {
+    display: block;
+}
+
+/* Mobile navigation */
+
+@media (max-width: 760px) {
+    .menu {
+        position: static;
+        text-align: left;
+        padding: 20px 20px 0;
+        line-height: 1.25;
+    }
+
+    .menu span {
+        margin-bottom: 0;
+    }
+
+    .menu a {
+        display: block;
+    }
+}
 
         /* Main content column */
 
